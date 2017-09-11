@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     
     @IBOutlet weak var answerLabel: UILabel!
-    @IBOutlet weak var inputLabel: UITextField!
+    @IBOutlet var inputLabel: [UITextField]!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var divideButton: UIButton!
@@ -33,12 +33,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var negButton: UIButton!
     @IBOutlet weak var zeroButton: UIButton!
     @IBOutlet weak var decButton: UIButton!
-    var inputText, ansText : Double
-
+  
+    
+  
     
     @IBAction func updateAnswer(_ sender: Any) {
-        inputText = 0
-        
+        var inputText = 0
+        var ansText = 4
+        answerLabel.text = String(ansText)
         
     }
     
@@ -50,6 +52,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+  
         
         
         

@@ -59,6 +59,9 @@
                                 <state key="normal" title="/">
                                     <color key="titleColor" red="0.16510648150000001" green="0.2009769626" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="shit:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="T0r-wW-EYO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgq-Oa-jg4">
                                 <rect key="frame" x="94" y="336" width="70" height="70"/>
@@ -194,9 +197,15 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dS-KX-ffM">
                                 <rect key="frame" x="16" y="173" width="332" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" updatesFrequently="YES"/>
+                                </accessibility>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="updateAnswer:" destination="BYZ-38-t0r" eventType="valueChanged" id="xhd-Fg-eI7"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -206,10 +215,10 @@
                         <outlet property="answerLabel" destination="eX2-bL-NBK" id="tZD-1v-0to"/>
                         <outlet property="clearButton" destination="bHc-cj-BGO" id="xTd-Ch-STg"/>
                         <outlet property="divideButton" destination="nJm-eu-mf9" id="dt0-t5-Pdl"/>
-                        <outlet property="inputText" destination="5dS-KX-ffM" id="9tS-i5-bK4"/>
                         <outlet property="leftButton" destination="fBy-hg-8MO" id="e09-GL-bDq"/>
                         <outlet property="rightButton" destination="aaQ-eR-6Yu" id="w2f-eO-Ace"/>
                         <outlet property="sevenButton" destination="00D-qr-yFL" id="NhJ-dZ-NFi"/>
+                        <outletCollection property="inputLabel" destination="5dS-KX-ffM" collectionClass="NSMutableArray" id="cLI-by-dSP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
