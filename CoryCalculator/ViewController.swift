@@ -37,6 +37,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func updateAnswer(_ sender: Any) {
+        inputText = 0
         
         
     }
