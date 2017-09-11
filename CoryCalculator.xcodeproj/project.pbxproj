@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A79523881F6725A200D1855F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79523871F6725A200D1855F /* AppDelegate.swift */; };
+		A795238A1F6725A200D1855F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79523891F6725A200D1855F /* ViewController.swift */; };
+		A795238D1F6725A200D1855F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A795238B1F6725A200D1855F /* Main.storyboard */; };
+		A795238F1F6725A200D1855F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795238E1F6725A200D1855F /* Assets.xcassets */; };
+		A79523921F6725A200D1855F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79523901F6725A200D1855F /* LaunchScreen.storyboard */; };
+		A795239D1F6725A200D1855F /* CoryCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795239C1F6725A200D1855F /* CoryCalculatorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A79523991F6725A200D1855F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A795237C1F6725A200D1855F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A79523831F6725A200D1855F;
+			remoteInfo = CoryCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A79523841F6725A200D1855F /* CoryCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoryCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79523871F6725A200D1855F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A79523891F6725A200D1855F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A795238C1F6725A200D1855F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A795238E1F6725A200D1855F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A79523911F6725A200D1855F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A79523931F6725A200D1855F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79523981F6725A200D1855F /* CoryCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoryCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A795239C1F6725A200D1855F /* CoryCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoryCalculatorTests.swift; sourceTree = "<group>"; };
+		A795239E1F6725A200D1855F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A79523811F6725A200D1855F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79523951F6725A200D1855F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A795237B1F6725A200D1855F = {
+			isa = PBXGroup;
+			children = (
+				A79523861F6725A200D1855F /* CoryCalculator */,
+				A795239B1F6725A200D1855F /* CoryCalculatorTests */,
+				A79523851F6725A200D1855F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A79523851F6725A200D1855F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A79523841F6725A200D1855F /* CoryCalculator.app */,
+				A79523981F6725A200D1855F /* CoryCalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A79523861F6725A200D1855F /* CoryCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				A79523871F6725A200D1855F /* AppDelegate.swift */,
+				A79523891F6725A200D1855F /* ViewController.swift */,
+				A795238B1F6725A200D1855F /* Main.storyboard */,
+				A795238E1F6725A200D1855F /* Assets.xcassets */,
+				A79523901F6725A200D1855F /* LaunchScreen.storyboard */,
+				A79523931F6725A200D1855F /* Info.plist */,
+			);
+			path = CoryCalculator;
+			sourceTree = "<group>";
+		};
+		A795239B1F6725A200D1855F /* CoryCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A795239C1F6725A200D1855F /* CoryCalculatorTests.swift */,
+				A795239E1F6725A200D1855F /* Info.plist */,
+			);
+			path = CoryCalculatorTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A79523831F6725A200D1855F /* CoryCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79523A11F6725A200D1855F /* Build configuration list for PBXNativeTarget "CoryCalculator" */;
+			buildPhases = (
+				A79523801F6725A200D1855F /* Sources */,
+				A79523811F6725A200D1855F /* Frameworks */,
+				A79523821F6725A200D1855F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoryCalculator;
+			productName = CoryCalculator;
+			productReference = A79523841F6725A200D1855F /* CoryCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A79523971F6725A200D1855F /* CoryCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79523A41F6725A200D1855F /* Build configuration list for PBXNativeTarget "CoryCalculatorTests" */;
+			buildPhases = (
+				A79523941F6725A200D1855F /* Sources */,
+				A79523951F6725A200D1855F /* Frameworks */,
+				A79523961F6725A200D1855F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A795239A1F6725A200D1855F /* PBXTargetDependency */,
+			);
+			name = CoryCalculatorTests;
+			productName = CoryCalculatorTests;
+			productReference = A79523981F6725A200D1855F /* CoryCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A795237C1F6725A200D1855F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = ABALab;
+				TargetAttributes = {
+					A79523831F6725A200D1855F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					A79523971F6725A200D1855F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A79523831F6725A200D1855F;
+					};
+				};
+			};
+			buildConfigurationList = A795237F1F6725A200D1855F /* Build configuration list for PBXProject "CoryCalculator" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A795237B1F6725A200D1855F;
+			productRefGroup = A79523851F6725A200D1855F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A79523831F6725A200D1855F /* CoryCalculator */,
+				A79523971F6725A200D1855F /* CoryCalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A79523821F6725A200D1855F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79523921F6725A200D1855F /* LaunchScreen.storyboard in Resources */,
+				A795238F1F6725A200D1855F /* Assets.xcassets in Resources */,
+				A795238D1F6725A200D1855F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79523961F6725A200D1855F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A79523801F6725A200D1855F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A795238A1F6725A200D1855F /* ViewController.swift in Sources */,
+				A79523881F6725A200D1855F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79523941F6725A200D1855F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A795239D1F6725A200D1855F /* CoryCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A795239A1F6725A200D1855F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A79523831F6725A200D1855F /* CoryCalculator */;
+			targetProxy = A79523991F6725A200D1855F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A795238B1F6725A200D1855F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A795238C1F6725A200D1855F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A79523901F6725A200D1855F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A79523911F6725A200D1855F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A795239F1F6725A200D1855F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A79523A01F6725A200D1855F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A79523A21F6725A200D1855F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoryCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CoryCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A79523A31F6725A200D1855F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoryCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CoryCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A79523A51F6725A200D1855F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoryCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CoryCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoryCalculator.app/CoryCalculator";
+			};
+			name = Debug;
+		};
+		A79523A61F6725A200D1855F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoryCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CoryCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoryCalculator.app/CoryCalculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A795237F1F6725A200D1855F /* Build configuration list for PBXProject "CoryCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A795239F1F6725A200D1855F /* Debug */,
+				A79523A01F6725A200D1855F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79523A11F6725A200D1855F /* Build configuration list for PBXNativeTarget "CoryCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79523A21F6725A200D1855F /* Debug */,
+				A79523A31F6725A200D1855F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79523A41F6725A200D1855F /* Build configuration list for PBXNativeTarget "CoryCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79523A51F6725A200D1855F /* Debug */,
+				A79523A61F6725A200D1855F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A795237C1F6725A200D1855F /* Project object */;
+}
