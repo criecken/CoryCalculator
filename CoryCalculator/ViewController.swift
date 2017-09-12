@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var decButton: UIButton!
     var inputText : Double = 0.0, ansText : Double = 0.0, decText = 0.0, wholeText = 0.0
     var decCheck : Bool = false
+    var count : Double = 1
     
    
     @IBAction func numberPress(_ sender: AnyObject) {
@@ -55,12 +56,19 @@ class ViewController: UIViewController {
             decCheck = false
         }
         else if decCheck {
-            decText = decText/10 + Double(input)!
-            decText = decText/10
+
+            decText = decText*count + Double(input)!
+
   
         }
         else {
             wholeText = wholeText*10 + Double(input)!
+        }
+       count = 10
+        while decText > 1 {
+            decText = decText / 10
+            count = count*10
+            
         }
         inputText = wholeText + decText
         inputLabel.text = String(inputText)
