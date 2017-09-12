@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7924E141F6886E700AF9F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A79523841F6725A200D1855F /* CoryCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoryCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79523871F6725A200D1855F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A79523891F6725A200D1855F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A795238C1F6725A200D1855F /* Base */,
+				A7924E141F6886E700AF9F3C /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

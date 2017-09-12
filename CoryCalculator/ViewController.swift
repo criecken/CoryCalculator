@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     
     @IBOutlet weak var answerLabel: UILabel!
-    @IBOutlet var inputLabel: [UITextField]!
+    @IBOutlet weak var inputLabel: UILabel!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var divideButton: UIButton!
@@ -33,26 +33,61 @@ class ViewController: UIViewController {
     @IBOutlet weak var negButton: UIButton!
     @IBOutlet weak var zeroButton: UIButton!
     @IBOutlet weak var decButton: UIButton!
-  
+    var inputText : Double = 0.0, ansText : Double = 0.0, decText = 0.0, wholeText = 0.0
+    var decCheck : Bool = false
     
+   
+    @IBAction func numberPress(_ sender: AnyObject) {
+        let input : String = sender.currentTitle!!
+        if input == "." {
+            decCheck = true        }
+        else if input == "C" {
+            if inputText == 0 {
+                ansText = 0
+            }
+            else {
+                inputText = 0
+            }
+            answerLabel.text = String(ansText)
+            inputLabel.text = String(inputText)
+            decText = 0
+            wholeText = 0
+            decCheck = false
+        }
+        else if decCheck {
+            decText = decText/10 + Double(input)!
+            decText = decText/10
   
-    
-    @IBAction func updateAnswer(_ sender: Any) {
-        var inputText = 0
-        var ansText = 4
-        answerLabel.text = String(ansText)
+        }
+        else {
+            wholeText = wholeText*10 + Double(input)!
+        }
+        inputText = wholeText + decText
+        inputLabel.text = String(inputText)
         
     }
     
     
+    @IBAction func negPress(_ sender: Any) {
+        inputText = -1*inputText
+        inputLabel.text = String(inputText)
+    }
+
     
-    
-    
-    
+    @IBAction func updateAnswer(_ sender: Any) {
+         inputText = 0
+         ansText = 4
+        answerLabel.text = String(ansText)
+        inputLabel.text = String(inputText)
+        decCheck = false
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-  
+        answerLabel.text = String(ansText)
+        inputLabel.text = String(inputText)
         
         
         
