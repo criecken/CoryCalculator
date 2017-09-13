@@ -33,60 +33,146 @@ class ViewController: UIViewController {
     @IBOutlet weak var negButton: UIButton!
     @IBOutlet weak var zeroButton: UIButton!
     @IBOutlet weak var decButton: UIButton!
-    var inputText : Double = 0.0, ansText : Double = 0.0, decText = 0.0, wholeText = 0.0
+    var inputText : Double = 0.0, firstNumText : Double = 0.0, decText = 0.0, wholeText = 0.0, ansText : Double = 0.0
+    var outputText : String = ""
     var decCheck : Bool = false
+    var orderCheckPlus : Bool = false
+    var orderCheckMinus : Bool = false
     var count : Double = 1
-    
+    var operation : String = ""
+    var oldOperation : String = ""
+    var operOrder : Double = 0.0
+
    
-    @IBAction func numberPress(_ sender: AnyObject) {
+    @IBAction func numberPress(_ sender: AnyObject) { //runs if any number is pressed
         let input : String = sender.currentTitle!!
         if input == "." {
-            decCheck = true        }
+            decCheck = true        }    //text will now fill after decimal
         else if input == "C" {
             if inputText == 0 {
                 ansText = 0
             }
             else {
-                inputText = 0
+                firstNumText = 0
+                decText = 0
+                wholeText = 0
+                decCheck = false
             }
-            answerLabel.text = String(ansText)
-            inputLabel.text = String(inputText)
-            decText = 0
-            wholeText = 0
-            decCheck = false
         }
         else if decCheck {
 
-            decText = decText*count + Double(input)!
+            decText = decText*count + Double(input)!    // decimal written as whole number
 
   
         }
         else {
-            wholeText = wholeText*10 + Double(input)!
+            wholeText = wholeText*10 + Double(input)!   //creates whole number input and increments each new input
         }
        count = 10
-        while decText > 1 {
+        while decText > 1 {         //converts whole number to decimal to be added at end of whole number
             decText = decText / 10
             count = count*10
             
         }
         inputText = wholeText + decText
-        inputLabel.text = String(inputText)
+        
+        if abs(firstNumText) > 0 {
+            outputText = "\(outputText) \(operation) \(inputText)"
+            inputLabel.text = outputText
+        }
+        else {
+            outputText = String(inputText)
+            inputLabel.text = outputText
+        }
+        
         
     }
     
     
-    @IBAction func negPress(_ sender: Any) {
+    @IBAction func negPress(_ sender: Any) {    //runs if negative button is pressed to change current value to negative
         inputText = -1*inputText
         inputLabel.text = String(inputText)
     }
 
+    @IBAction func operandPress(_ sender: AnyObject) { //runs if an operation is specified
+        operation = sender.currentTitle!!
+
+        if orderCheckPlus{
+            switch operation {
+            case "+" , "-":
+                if oldOperation == "X" {
+                    ansText = operOrder + firstNumText*inputText
+                }
+                else if oldOperation == "/" {
+                    ansText = operOrder + firstNumText/inputText
+                }
+            default:
+                
+            }
+        }
+
+
+        if oldOperation != "" {
+            switch oldOperation {
+            case "/":
+                ansText = firstNumText / inputText
+            case "X":
+                ansText = firstNumText * inputText
+            case "-":
+                if operation == "+"{
+                    ansText = firstNumText - inputText
+                }
+                else if operation == "-" {
+                    ansText = firstNumText - inputText
+                }
+                else {
+                    operOrder = firstNumText
+                    orderCheckMinus = true
+                }
+        
+            case "+":
+                if operation == "+" {
+                    ansText = firstNumText + inputText
+                }
+                else if operation == "-" {
+                    ansText = firstNumText + inputText
+                }
+                else {
+                    operOrder = firstNumText
+                    orderCheckPlus = true
+                }
+            default:
+                answerLabel.text = "Wrong!"
+            }
+        }
+
+        firstNumText = inputText
+        wholeText = 0
+        decText = 0
+        decCheck = false
+        oldOperation = operation
+       
+
+    }
     
     @IBAction func updateAnswer(_ sender: Any) {
-         inputText = 0
-         ansText = 4
+        switch operation {
+        case "/":
+            ansText = firstNumText / inputText
+        case "X":
+            ansText = firstNumText * inputText
+        case "-":
+            ansText = firstNumText - inputText
+        case "+":
+            ansText = firstNumText + inputText
+        default:
+            answerLabel.text = "Wrong!"
+        }
         answerLabel.text = String(ansText)
-        inputLabel.text = String(inputText)
+        firstNumText = 0
+        decText = 0
+        wholeText = 0
+        inputLabel.text = "0"
         decCheck = false
         
     }
@@ -94,7 +180,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        answerLabel.text = String(ansText)
+        answerLabel.text = String(firstNumText)
         inputLabel.text = String(inputText)
         
         
