@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     
     @IBOutlet weak var answerLabel: UILabel!        //Label filled at equals press
-    @IBOutlet weak var inputLabel: UILabel!         //Label filled as user inputs values
+    @IBOutlet weak var inputLabel: UILabel!         //label filled as user fills
     @IBOutlet weak var clearButton: UIButton!       //clears input, then answer label
     @IBOutlet weak var divideButton: UIButton!      //division button
     @IBOutlet weak var multiplyButton: UIButton!    //multiply button
@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var threeButton: UIButton!       //number 3
     @IBOutlet weak var equalsButton: UIButton!      //equals button
     @IBOutlet weak var negButton: UIButton!         //negative button
+    
+         
     @IBOutlet weak var zeroButton: UIButton!        //zero button
     @IBOutlet weak var decButton: UIButton!         //decimal button
     var inputText : Double = 0.0, firstNumText : Double = 0.0, decText = 0.0, wholeText = 0.0, ansText : Double = 0.0
@@ -50,9 +52,6 @@ class ViewController: UIViewController {
         else if input == "C" {
             if inputText == 0 {         //clears answer if input is already clear
                 ansText = 0
-            }
-            else if input == "+/-" {
-                inputText = -1*inputText 
             }
             else {
                 firstNumText = 0        //set all relevant values to zero, reset decimals
@@ -92,7 +91,12 @@ class ViewController: UIViewController {
     }
     
     
-
+    @IBAction func negPress(_ sender: Any) {
+        inputText = -1*inputText
+        outputText = String(inputText)
+        inputLabel.text = outputText
+    }
+    
 
     @IBAction func operandPress(_ sender: AnyObject) { //runs if an operation is specified
         operation = sender.currentTitle!!
@@ -176,7 +180,7 @@ class ViewController: UIViewController {
                 answerLabel.text = "Wrong!"                 //default text
             }
         }
-
+        inputLabel.text = outputText
         firstNumText = inputText    //sets old number
         wholeText = 0               //reset whole and parts of input
         decText = 0
@@ -280,7 +284,7 @@ class ViewController: UIViewController {
         }
         }
         answerLabel.text = String(ansText)      //displays answer
-        firstNumText = 0                     //resets values
+        firstNumText = ansText                 //resets values
         decText = 0
         wholeText = 0
         outputText = String(ansText)

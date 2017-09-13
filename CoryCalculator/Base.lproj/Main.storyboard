@@ -127,17 +127,6 @@
                                     <action selector="operandPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NLp-6n-SkU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCy-fi-bEd">
-                                <rect key="frame" x="16" y="570" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="+/-">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLW-KQ-Gkf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oE3-tU-01h">
                                 <rect key="frame" x="172" y="570" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -232,6 +221,17 @@
                                     <action selector="numberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L6Q-l3-Xdv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-mr-b2y">
+                                <rect key="frame" x="16" y="570" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="(-)">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="negPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSZ-NR-0y4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -241,6 +241,7 @@
                         <outlet property="clearButton" destination="bHc-cj-BGO" id="xTd-Ch-STg"/>
                         <outlet property="divideButton" destination="nJm-eu-mf9" id="dt0-t5-Pdl"/>
                         <outlet property="inputLabel" destination="njN-pr-Bk2" id="lTO-wt-M5T"/>
+                        <outlet property="negButton" destination="XIy-mr-b2y" id="Da4-w6-1vs"/>
                         <outlet property="sevenButton" destination="00D-qr-yFL" id="NhJ-dZ-NFi"/>
                     </connections>
                 </viewController>
