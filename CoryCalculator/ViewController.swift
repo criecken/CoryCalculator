@@ -100,13 +100,13 @@ class ViewController: UIViewController {
 
     @IBAction func operandPress(_ sender: AnyObject) { //runs if an operation is specified
         operation = sender.currentTitle!!
-      
-        if firstNumText != 0 {
-            outputText = "\(outputText) \(operation)\(inputText)"
+        
+        
+        if firstNumText != 0  {
+            outputText="\(outputText)\(inputText)"
         }
-        else {
-            outputText = "\(outputText) \(operation)"
-        }
+        outputText = "\(outputText) \(operation)"
+        
         
         if orderCheckPlus{                          //check for order of operations on old eq. (operOrder + firstNumText*inputText - example)
             switch operation {                      //looks at current operation
@@ -284,7 +284,7 @@ class ViewController: UIViewController {
         }
         }
         answerLabel.text = String(ansText)      //displays answer
-        firstNumText = ansText                 //resets values
+        firstNumText = 0                 //resets values
         decText = 0
         wholeText = 0
         outputText = String(ansText)
