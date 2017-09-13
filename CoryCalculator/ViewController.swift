@@ -51,6 +51,9 @@ class ViewController: UIViewController {
             if inputText == 0 {         //clears answer if input is already clear
                 ansText = 0
             }
+            else if input == "+/-" {
+                inputText = -1*inputText 
+            }
             else {
                 firstNumText = 0        //set all relevant values to zero, reset decimals
                 decText = 0
@@ -78,27 +81,29 @@ class ViewController: UIViewController {
         inputText = wholeText + decText //adds whole number and decimal
         
         if abs(firstNumText) > 0 {                                  //more than one number
-            outputText = "\(outputText) \(operation) \(inputText)"  //increments math equation
-            inputLabel.text = outputText                            //displays whole equation
+            inputLabel.text = "\(outputText)\(inputText)"                           //displays whole equation
         }
         else {                                                      //one number
-            outputText = String(inputText)                          //creates initial equation
-            inputLabel.text = outputText                            //displays equation
+            outputText = String(inputText)
+            inputLabel.text = outputText                         //displays equation
         }
         
         
     }
     
     
-    @IBAction func negPress(_ sender: Any) {    //runs if negative button is pressed to change current value to negative
-        inputText = -1*inputText                //changes value to negative
-        inputLabel.text = String(inputText)     //displays value
-    }
+
 
     @IBAction func operandPress(_ sender: AnyObject) { //runs if an operation is specified
         operation = sender.currentTitle!!
+      
+        if firstNumText != 0 {
+            outputText = "\(outputText) \(operation)\(inputText)"
+        }
+        else {
+            outputText = "\(outputText) \(operation)"
+        }
         
-
         if orderCheckPlus{                          //check for order of operations on old eq. (operOrder + firstNumText*inputText - example)
             switch operation {                      //looks at current operation
             case "+" , "-":                         //if op. is add or subtract we can add all numbers to get a single answer
@@ -184,7 +189,7 @@ class ViewController: UIViewController {
     
     @IBAction func updateAnswer(_ sender: Any) {
         if ansText == 0 {                                 //if this is only relevant calc.
-        switch operation {                                      //checks operation
+        switch operation {                                //checks operation, then performs
         case "/":
             ansText = firstNumText / inputText
         case "X":
@@ -197,9 +202,9 @@ class ViewController: UIViewController {
             answerLabel.text = "Wrong!"
         }
         }
-        else if orderCheckMinus {
+        else if orderCheckMinus {                       //order of operations plays a part
             if abs(ansText) > 0 {
-                switch operation {
+                switch operation {                          //checks operation then performs
                 case "/":
                     ansText = operOrder - ansText/inputText
                 case "X":
@@ -213,7 +218,7 @@ class ViewController: UIViewController {
                 }
             }
             else {
-                switch operation {
+                switch operation {                          //checks operation then performs
                 case "/":
                     ansText = operOrder - firstNumText/inputText
                 case "X":
@@ -229,8 +234,8 @@ class ViewController: UIViewController {
             
             
         }
-        else if orderCheckPlus {
-            if abs(ansText) > 0 {
+        else if orderCheckPlus {                    //order of operations, same as before with (+) instead of (-)
+            if abs(ansText) > 0 {                   //if this is a multistep calc.
                 switch operation {
                 case "/":
                     ansText = operOrder + ansText/inputText
@@ -244,7 +249,7 @@ class ViewController: UIViewController {
                     answerLabel.text = "Wrong!"
                 }
             }
-            else {
+            else {                                  //two step calc
                 switch operation {
                 case "/":
                     ansText = operOrder + firstNumText/inputText
@@ -260,7 +265,7 @@ class ViewController: UIViewController {
             }
             
         }
-        else {
+        else {                              //if this is a multistep calc w/o order of ops
             switch operation {
             case "/":
                 ansText = ansText / inputText
@@ -274,11 +279,12 @@ class ViewController: UIViewController {
                 answerLabel.text = "Wrong!"
         }
         }
-        answerLabel.text = String(ansText)
-        firstNumText = 0
+        answerLabel.text = String(ansText)      //displays answer
+        firstNumText = 0                     //resets values
         decText = 0
         wholeText = 0
-        inputLabel.text = "0"
+        outputText = String(ansText)
+        inputLabel.text = outputText                   //display zero at input
         decCheck = false
         
     }
