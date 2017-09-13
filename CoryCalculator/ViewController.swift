@@ -14,12 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerLabel: UILabel!        //Label filled at equals press
     @IBOutlet weak var inputLabel: UILabel!         //Label filled as user inputs values
     @IBOutlet weak var clearButton: UIButton!       //clears input, then answer label
-    @IBOutlet weak var rightButton: UIButton!       //right parens
     @IBOutlet weak var divideButton: UIButton!      //division button
     @IBOutlet weak var multiplyButton: UIButton!    //multiply button
     @IBOutlet weak var minusButton: UIButton!       //minus button
     @IBOutlet weak var plusButton: UIButton!        //plus button
-    @IBOutlet weak var leftButton: UIButton!        //left parens
     @IBOutlet weak var eightButton: UIButton!       //number 8
     @IBOutlet weak var sevenButton: UIButton!       //number 7
     @IBOutlet weak var nineButton: UIButton!        //number 9
@@ -99,6 +97,7 @@ class ViewController: UIViewController {
 
     @IBAction func operandPress(_ sender: AnyObject) { //runs if an operation is specified
         operation = sender.currentTitle!!
+        
 
         if orderCheckPlus{                          //check for order of operations on old eq. (operOrder + firstNumText*inputText - example)
             switch operation {                      //looks at current operation
@@ -174,8 +173,9 @@ class ViewController: UIViewController {
         }
 
         firstNumText = inputText    //sets old number
-        wholeText = 0               //reset parts of input
+        wholeText = 0               //reset whole and parts of input
         decText = 0
+        //inputText = 0
         decCheck = false            //reset decimal
         oldOperation = operation    //record oldOperation for next button press
        
@@ -183,8 +183,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func updateAnswer(_ sender: Any) {
-        if oldOperation == "" {                                 //if this is first calc.
-        switch operation {                                      //checks operation 
+        if ansText == 0 {                                 //if this is only relevant calc.
+        switch operation {                                      //checks operation
         case "/":
             ansText = firstNumText / inputText
         case "X":
